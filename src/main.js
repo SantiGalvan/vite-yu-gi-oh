@@ -4,13 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 
-/* Importo la libreria generica */
+/* Importo la libreria generica di Font Awesome */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* Importo il componente di Font Awesome */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-/* Importo l'icona che voglio usare */
+/* Importo l'icona che voglio usare di Font Awesome */
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 /* Icone da caricare */
