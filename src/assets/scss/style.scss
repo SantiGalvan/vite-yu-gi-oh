@@ -18,13 +18,29 @@ main {
 }
 
 .card {
-    background-color: greenyellow;
     height: 300px;
+    cursor: pointer;
 
     img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         margin: 0 auto;
+    }
+
+    &.grass {
+        background-color: $grass-color;
+    }
+
+    &.fire {
+        background-color: $fire-color;
+    }
+
+    &.water {
+        background-color: $water-color;
+    }
+
+    &:hover {
+        scale: 1.1;
     }
 }
