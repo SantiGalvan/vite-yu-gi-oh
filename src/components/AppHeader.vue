@@ -6,7 +6,7 @@ export default {
 
 <template>
     <header>
-        <div class="container d-flex justify-content-between mt-5 mb-5">
+        <div class="container d-flex justify-content-between mt-5 mb-4">
             <h1>Pokédex Nazionale</h1>
             <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" class="fa-2x" role="button" />
         </div>
