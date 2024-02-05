@@ -4,7 +4,9 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <!-- Header WIP -->
+</template>
 
 <style lang="scss">
 @use './assets/scss/style.scss'
