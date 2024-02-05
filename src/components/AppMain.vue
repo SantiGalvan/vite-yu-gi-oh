@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    <main class="container">
         <PokemonsList />
     </main>
 </template>
