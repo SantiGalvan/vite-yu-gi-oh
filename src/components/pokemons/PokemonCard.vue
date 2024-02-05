@@ -15,7 +15,7 @@ export default {
         <img :src="url" class="card-img-top mt-3" :alt="name">
         <div class="card-body">
             <span>{{ number }}</span>
-            <h4 class="card-title fw-bold">{{ name }}</h4>
+            <h5 class="card-title fw-bold">{{ name }}</h5>
             <p class="card-text">{{ type }}</p>
         </div>
     </div>
