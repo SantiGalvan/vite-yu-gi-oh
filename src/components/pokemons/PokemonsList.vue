@@ -1,9 +1,9 @@
 <script>
+import PokemonCard from './PokemonCard.vue';
 export default {
-    name: 'PokemonList',
+    name: 'PokemonsList',
+    components: { PokemonCard }
 }
 </script>
 
 <template></template>
-
-<style></style>
