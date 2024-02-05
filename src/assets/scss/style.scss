@@ -10,3 +10,13 @@ body {
 header {
     color: #fff;
 }
+
+// Main
+main {
+    .container {
+        background: rgba(255, 255, 255, 0.6) url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+        border-radius: 40px;
+
+        height: 600px;
+    }
+}
