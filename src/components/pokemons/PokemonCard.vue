@@ -11,11 +11,11 @@ export default {
 </script>
 
 <template>
-    <div class="card text-center my-4">
+    <div class="card text-center my-4" :class="type.toLowerCase()">
         <img :src="url" class="card-img-top mt-3" :alt="name">
         <div class="card-body">
             <span>{{ number }}</span>
-            <h4 class="card-title">{{ name }}</h4>
+            <h4 class="card-title fw-bold">{{ name }}</h4>
             <p class="card-text">{{ type }}</p>
         </div>
     </div>
