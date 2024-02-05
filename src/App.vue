@@ -1,11 +1,13 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
 export default {
-    name: 'Pokedex'
+    name: 'Pokedex',
+    components: { AppHeader }
 }
 </script>
 
 <template>
-    <!-- Header WIP -->
+    <AppHeader />
 </template>
 
 <style lang="scss">
