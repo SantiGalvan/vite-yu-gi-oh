@@ -1,15 +1,36 @@
 <script>
 export default {
-    name: 'TypeSelect'
+    name: 'TypeSelect',
+    data: () => ({
+        types: [
+            "Bug",
+            "Dark",
+            "Dragon",
+            "Electric",
+            "Fairy",
+            "Fighting",
+            "Fire",
+            "Flying",
+            "Ghost",
+            "Grass",
+            "Ground",
+            "Ice",
+            "Normal",
+            "Poison",
+            "Psychic",
+            "Rock",
+            "Steel",
+            "Water"
+        ],
+        selectOption: 'All'
+    })
 }
 </script>
 
 <template>
-    <select class="form-select me-3">
+    <select class="form-select me-3" v-model="selectOption">
         <option selected>All</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option v-for="(type, i) in types" :key="i" :value="type">{{ type }}</option>
     </select>
 </template>
 
