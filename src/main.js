@@ -11,10 +11,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* Importo l'icona che voglio usare di Font Awesome */
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 /* Icone da caricare */
-library.add(faMagnifyingGlass);
+library.add(faMagnifyingGlass, faXmark);
 
 
 const app = createApp(App)
