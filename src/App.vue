@@ -9,14 +9,18 @@ export default {
     name: 'Pokedex',
     components: { AppHeader, AppMain },
     created() {
-        axios.get(endpoint).then(res => {
-            store.pokemons = res.data.docs;
-        });
+        this.fetchPokemons(endpoint),
+            this.fetchPokemonsType(endpointType)
     },
     methods: {
         fetchPokemons(endpoint) {
             axios.get(endpoint).then(res => {
                 store.pokemons = res.data.docs;
+            });
+        },
+        fetchPokemonsType(endpoint) {
+            axios.get(endpoint).then(res => {
+                store.types = res.data;
             });
         },
         fetchTypeSelect(option) {
