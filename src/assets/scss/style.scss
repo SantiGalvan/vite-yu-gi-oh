@@ -33,8 +33,44 @@ main {
         margin: 0 auto;
     }
 
-    &.grass {
-        background-color: $grass-color;
+    &:hover {
+        scale: 1.1;
+    }
+
+    &.normal {
+        background-color: $normal-color;
+    }
+
+    &.fighting {
+        background-color: $fighting-color;
+    }
+
+    &.flying {
+        background-color: $flying-color;
+    }
+
+    &.poison {
+        background-color: $poison-color;
+    }
+
+    &.ground {
+        background-color: $ground-color;
+    }
+
+    &.rock {
+        background-color: $rock-color;
+    }
+
+    &.bug {
+        background-color: $bug-color;
+    }
+
+    &.ghost {
+        background-color: $ghost-color;
+    }
+
+    &.steel {
+        background-color: $steel-color;
     }
 
     &.fire {
@@ -45,7 +81,31 @@ main {
         background-color: $water-color;
     }
 
-    &:hover {
-        scale: 1.1;
+    &.grass {
+        background-color: $grass-color;
+    }
+
+    &.electric {
+        background-color: $electric-color;
+    }
+
+    &.psychic {
+        background-color: $psychic-color;
+    }
+
+    &.ice {
+        background-color: $ice-color;
+    }
+
+    &.dragon {
+        background-color: $dragon-color;
+    }
+
+    &.dark {
+        background-color: $dark-color;
+    }
+
+    &.fairy {
+        background-color: $fairy-color;
     }
 }
