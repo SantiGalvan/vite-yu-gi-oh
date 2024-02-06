@@ -11,12 +11,27 @@ export default {
         axios.get(endpoint).then(res => {
             store.pokemons = res.data.docs;
         });
+    },
+    methods: {
+        fetchPokemons(endpoint) {
+            axios.get(endpoint).then(res => {
+                store.pokemons = res.data.docs;
+            });
+        },
+        fetchTypeSelect(option) {
+            const endpointType = `${endpoint}?eq[type1]=${option}`
+            this.fetchPokemons(endpointType)
+
+            if (option === 'All') {
+                this.fetchPokemons(endpoint)
+            }
+        }
     }
 }
 </script>
 
 <template>
-    <AppHeader />
+    <AppHeader @option-select="fetchTypeSelect" />
     <AppMain />
 </template>
 
