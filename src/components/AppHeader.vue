@@ -1,6 +1,8 @@
 <script>
+import TypeSelect from './TypeSelect.vue';
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    components: { TypeSelect }
 }
 </script>
 
@@ -10,6 +12,7 @@ export default {
             <h1 class="ms-3 fw-bolder">Pokédex Nazionale</h1>
             <div class="d-flex justify-content-between align-items-center">
                 <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" class="fa-2x ms-3" role="button" />
+                <TypeSelect />
             </div>
         </div>
     </header>
