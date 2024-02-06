@@ -8,6 +8,7 @@ const endpointType = 'https://41tyokboji.execute-api.eu-central-1.amazonaws.com/
 export default {
     name: 'Pokedex',
     components: { AppHeader, AppMain },
+    data: () => ({ store }),
     created() {
         this.fetchPokemons(endpoint),
             this.fetchPokemonsType(endpointType)
@@ -30,6 +31,16 @@ export default {
             if (option === 'All') {
                 this.fetchPokemons(endpoint)
             }
+        },
+        morePokemons(number) {
+            number += 10;
+            this.store.numberPokemons = number;
+            const endpointMorePokemons = `${endpoint}?per=${number}`;
+            this.fetchPokemons(endpointMorePokemons);
+        },
+        resetPokemons() {
+            this.fetchPokemons(endpoint);
+            this.store.numberPokemons = 10;
         }
     }
 }
@@ -37,7 +48,7 @@ export default {
 
 <template>
     <AppHeader @option-select="fetchTypeSelect" />
-    <AppMain />
+    <AppMain @more-pokemons="morePokemons(store.numberPokemons)" @reset="resetPokemons" />
 </template>
 
 <style lang="scss">
