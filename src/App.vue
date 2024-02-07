@@ -10,8 +10,8 @@ export default {
     components: { AppHeader, AppMain },
     data: () => ({ store }),
     created() {
-        this.fetchPokemons(endpoint),
-            this.fetchPokemonsType(endpointType)
+        this.fetchPokemons(endpoint);
+        this.fetchPokemonsType(endpointType)
     },
     methods: {
         fetchPokemons(endpoint) {
