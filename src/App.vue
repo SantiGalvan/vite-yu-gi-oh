@@ -41,13 +41,16 @@ export default {
         resetPokemons() {
             this.fetchPokemons(endpoint);
             this.store.numberPokemons = 10;
+        },
+        getInput() {
+            this.store.isSearch = !this.store.isSearch;
         }
     }
 }
 </script>
 
 <template>
-    <AppHeader @option-select="fetchTypeSelect" />
+    <AppHeader @option-select="fetchTypeSelect" @get-input="getInput" />
     <AppMain @more-pokemons="morePokemons(store.numberPokemons)" @reset="resetPokemons" />
 </template>
 
