@@ -44,13 +44,18 @@ export default {
         },
         getInput() {
             this.store.isSearch = !this.store.isSearch;
+        },
+        searchPokemons(term) {
+            console.log('Devo cercare', term);
+            const searchEndpoint = `${endpoint}?q[name]=${term}`;
+            this.fetchPokemons(searchEndpoint);
         }
     }
 }
 </script>
 
 <template>
-    <AppHeader @option-select="fetchTypeSelect" @get-input="getInput" />
+    <AppHeader @option-select="fetchTypeSelect" @get-input="getInput" @submit-form="searchPokemons" />
     <AppMain @more-pokemons="morePokemons(store.numberPokemons)" @reset="resetPokemons" />
 </template>
 
