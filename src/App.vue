@@ -25,10 +25,11 @@ export default {
             });
         },
         fetchTypeSelect(option) {
-            const endpointType = `${endpoint}?eq[type1]=${option}`
-            this.fetchPokemons(endpointType)
+            if (option) {
+                const endpointType = `${endpoint}?eq[type1]=${option}`
+                this.fetchPokemons(endpointType)
 
-            if (option === 'All') {
+            } else {
                 this.fetchPokemons(endpoint)
             }
         },
