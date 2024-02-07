@@ -6,13 +6,8 @@ import SearchForm from './SearchForm.vue'
 export default {
     name: 'AppHeader',
     data: () => ({ store }),
-    methods: {
-        getInput() {
-            this.store.isSearch = !this.store.isSearch;
-        }
-    },
     components: { TypeSelect, FontAwesomeIcon, SearchForm },
-    emits: ['option-select']
+    emits: ['option-select', 'get-input']
 }
 </script>
 
@@ -22,8 +17,8 @@ export default {
             <h1 class="ms-3 fw-bolder">Pokédex Nazionale</h1>
             <div class="d-flex justify-content-between align-items-center">
                 <FontAwesomeIcon v-if="!store.isSearch" icon="fa-solid fa-magnifying-glass" class="fa-2x ms-3" role="button"
-                    @click="getInput" />
-                <SearchForm v-else @get-input="getInput" @submit-form="console.log('cliccato')" />
+                    @click="$emit('get-input')" />
+                <SearchForm v-else @get-input="$emit('get-input')" @submit-form="console.log('cliccato')" />
                 <TypeSelect @option-select="$emit('option-select', $event)" :types="store.types" />
             </div>
         </div>
