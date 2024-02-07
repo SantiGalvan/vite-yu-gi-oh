@@ -18,7 +18,7 @@ export default {
             <div class="d-flex justify-content-between align-items-center">
                 <FontAwesomeIcon v-if="!store.isSearch" icon="fa-solid fa-magnifying-glass" class="fa-2x ms-3" role="button"
                     @click="$emit('get-input')" />
-                <SearchForm v-else @get-input="$emit('get-input')" @submit-form="$emit('submit-form')"
+                <SearchForm v-else @get-input="$emit('get-input')" @submit-form="$emit('submit-form', $event)"
                     placeholder="Cerca Pokemon" />
                 <TypeSelect @option-select="$emit('option-select', $event)" :types="store.types" />
             </div>
